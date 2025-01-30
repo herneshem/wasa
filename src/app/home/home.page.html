@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Chat
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,17 +9,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Chat</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <ion-list>
+    
+    <ion-list class="lista">
        @for (mensaje of firebaseService.mensajes; track $index){
-        <ion-item>{{mensaje.child('mensaje').val()}}</ion-item>
+        <ion-item class="mensajechat">{{mensaje.child('mensaje').child("mensaje").val()}}</ion-item>
+        <ion-item class="emisorchat">{{mensaje.child('mensaje').child("emisor").val()}}</ion-item>
+         
        }
-    </ion-list>
-    <ion-input [(ngModel)]="mensaje"></ion-input>
-    <ion-button (click)="enviar()">Enviar</ion-button>
+    </ion-list >
+
+    <div class="foot">
+      <ion-input [(ngModel)]="mensaje.mensaje"></ion-input>
+      <ion-button (click)="enviar()">Enviar</ion-button>
+    </div>
+    
   </div>
 </ion-content>

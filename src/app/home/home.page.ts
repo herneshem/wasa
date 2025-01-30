@@ -3,6 +3,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonList, IonIte
 import { FirebaseService } from '../services/firebase.service';
 import { IonInput } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
+import { Mensaje } from '../interfaces/mensaje';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,13 @@ import { FormsModule } from '@angular/forms';
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonInput, FormsModule,IonButton, IonList, IonItem],
 })
 export class HomePage {
-  mensaje:string="";
+  mensaje:Mensaje={};
+  mensajes:Mensaje[]=[]
   firebaseService = inject(FirebaseService)
   constructor() {}
 
   enviar(){
-    this.firebaseService.enviarMensaje(this.mensaje)
+    this.firebaseService.enviarMensaje(this.mensaje);
+    this.mensaje.mensaje="";
   }
 }

@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app';
 import { Database, DatabaseReference, getDatabase, onValue, ref, remove, set, push } from
   "firebase/database";
 import { firebaseConfig } from 'src/environments/environment';
+import { Mensaje } from '../interfaces/mensaje';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class FirebaseService {
     });
   }
 
-  public enviarMensaje(mensaje: string) {
+  public enviarMensaje(mensaje: Mensaje) {
     const nuevoMensaje = push(this.dbMensajes); //Crea un nuevo elemento
     set(nuevoMensaje, { mensaje: mensaje }); //Asigna valor al elemento
   }

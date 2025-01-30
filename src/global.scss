@@ -36,13 +36,15 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
 
+
+.toolbar-title-default.md.in-toolbar{text-align: center !important;}
 #container{
  transform: translate(80%);
-    .md.list-md{
-        
-    }
+
     .native-wrapper{
-        background-color: rgb(251, 249, 249);
+        background-color: rgb(210, 227, 239);
+        border: .01rem solid;
+        margin: 0 1rem;
     }
     .md.button{
         margin-top: 1rem;
@@ -50,5 +52,17 @@
     }
     button.button-native{
         background-color: black !important;
+    }
+    .lista{
+        height: 80vh;
+        position: relative;
+        padding: 2rem 1rem;
+        .mensajechat{
+            color: rgb(166, 13, 13);
+        }
+        .emisorchat{
+            color: blue;
+        }
+        
     }
 }
