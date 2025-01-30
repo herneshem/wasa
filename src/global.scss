@@ -42,9 +42,12 @@
  transform: translate(80%);
 
     .native-wrapper{
-        background-color: rgb(210, 227, 239);
+        background-color: rgb(221, 234, 243);
         border: .01rem solid;
         margin: 0 1rem;
+        // &::before{
+        //     content: url(./assets/micro.png);
+        // }
     }
     .md.button{
         margin-top: 1rem;
