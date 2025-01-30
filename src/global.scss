@@ -35,3 +35,20 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+#container{
+ transform: translate(80%);
+    .md.list-md{
+        
+    }
+    .native-wrapper{
+        background-color: rgb(251, 249, 249);
+    }
+    .md.button{
+        margin-top: 1rem;
+       
+    }
+    button.button-native{
+        background-color: black !important;
+    }
+}
